@@ -67,4 +67,14 @@ console.log(check2([10, 15, 3, 7], 17)) // true
 console.log(check2([10, 15, 3, 7], 30)) // false
 
 
-// task 3
+// task 4
+
+function sumDigits(num) {
+    for (let i=0; i<num.length; i++){
+        
+
+    }
+}
+
+console.log(sumDigit(123)) // 6
+console.log(sumDigits(904)) // 13
