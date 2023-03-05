@@ -83,3 +83,47 @@ console.log(sumDigits(904)) // 13
 
 
 // task 5
+
+function fulter(a, b, c) {
+    const arr = [];
+    for(let i=a; i<=b; i++){
+        if(i % c === 0){
+            arr.push(i)
+        }
+    }
+    return arr;
+}
+
+console.log(fulter(5, 15, 3)) // [6, 9, 12, 15]
+
+// task 6
+
+function pal(str) {
+    let let1;
+    let let2;
+    for(let i=0; i<Math.floor(str.length/2); i++){
+        let1 = str.charAt(i);
+        console.log(let1) 
+        for(let j = str.length-1; j>=0; j--){
+            // if(str[i] == str[str.length-1] ){      
+            let2 = str.charAt(j);  
+            // }
+            console.log(let2) 
+        }
+        // for (let j=str.length-1; j<str.length; j++){
+        //     console.log(str.length-1)
+        // }
+        //     if(str[i]==str[j]){
+        //         
+        //     }
+        // }
+          
+            // console.log(str[i])    
+    }
+     
+}
+
+pal("то")
+
+// console.log(pal('топот')) // true
+// console.log(pal('Колобок')) // false
