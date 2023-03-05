@@ -70,11 +70,16 @@ console.log(check2([10, 15, 3, 7], 30)) // false
 // task 4
 
 function sumDigits(num) {
-    for (let i=0; i<num.length; i++){
-        
-
+    numToString = String(num);
+    let sum = 0;
+    for (let i=0; i<numToString.length; i++){
+        sum += +numToString[i];
     }
+    return sum
 }
 
-console.log(sumDigit(123)) // 6
+console.log(sumDigits(123))   // 6
 console.log(sumDigits(904)) // 13
+
+
+// task 5
