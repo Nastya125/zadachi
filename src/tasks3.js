@@ -99,31 +99,15 @@ console.log(fulter(5, 15, 3)) // [6, 9, 12, 15]
 // task 6
 
 function pal(str) {
-    let let1;
-    let let2;
-    for(let i=0; i<Math.floor(str.length/2); i++){
-        let1 = str.charAt(i);
-        console.log(let1) 
-        for(let j = str.length-1; j>=0; j--){
-            // if(str[i] == str[str.length-1] ){      
-            let2 = str.charAt(j);  
-            // }
-            console.log(let2) 
-        }
-        // for (let j=str.length-1; j<str.length; j++){
-        //     console.log(str.length-1)
-        // }
-        //     if(str[i]==str[j]){
-        //         
-        //     }
-        // }
-          
-            // console.log(str[i])    
+    const reverseStr = str.split('').reverse().join('');
+    if(str === reverseStr){
+        return true
+    } else {
+        return false
     }
-     
 }
 
-pal("то")
+ console.log(pal('топот')) // true
+ console.log(pal('Колобок')) // false
 
-// console.log(pal('топот')) // true
-// console.log(pal('Колобок')) // false
+ // task 7
