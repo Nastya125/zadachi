@@ -129,13 +129,96 @@ console.log(getMaxEvenElement([4, -12, 29, 6, 31, 92, -50])) // 31
  // task 8
 
 function encode(str) {
+    let result = "";
+    const vowels = {
+        a: "1", 
+        e: "2", 
+        i: "3", 
+        o: "4", 
+        u: "5"  
+    };
 
+    for(let i=0; i<str.length; i++){
+        if(vowels[str[i]]){
+            result += vowels[str[i]];
+        } else {
+            result += str[i];
+        }
+    }
+
+   return result;
 }
 
 function decode(str) {
+        let result = "";
+        const vowels = {
+            1: "a", 
+            2: "e", 
+            3: "i", 
+            4: "o", 
+            5: "u"  
+        };
+    
+        for(let i=0; i<str.length; i++){
+            if(vowels[str[i]]){
+                result += vowels[str[i]];
+            } else {
+                result += str[i];
+            }
+        }
+    
+       return result;
 
 }
 
 
 console.log(encode('hello')) // h2ll4
 console.log(decode('h2ll4')) // hello
+
+
+ // task 9
+
+function numbers(){
+    const arr = [];
+
+    for(let i=1; i <= 100; i++){
+        if(i % 3 == 0 && i % 5 == 0) {
+            arr.push("FizzBuzz")
+        } else if(i % 3 == 0) {
+            arr.push("Fizz")
+        } else if(i % 5 == 0) {
+            arr.push("Buzz")
+        } else {
+            arr.push(i)
+        }
+    }
+
+    const showScreen = document.querySelector("#task9");
+    showScreen.innerHTML = arr;
+}
+
+numbers()
+
+
+ // task 10
+
+function add(x) {
+    if(!x){
+        x=0;
+        return 0;
+    }
+    
+    let sum = x;
+    return function resultFn(y){
+        if(arguments.length){ 
+            sum += y;
+            return resultFn;
+        }
+        return sum;
+    }
+}
+
+
+console.log(add()) // 0
+console.log(add(2)(1)()) //3
+console.log(add(5)(-1)(2)()) // 6
