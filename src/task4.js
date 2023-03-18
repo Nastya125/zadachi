@@ -1,13 +1,3 @@
-function CreateButton(textContent, color, callBack) {
-
-    this.layout ()
-    
-    this.setTextContent ()
-    
-    this.setCallBack ()
-    
-    }
-
     class CreateInput {
 
         constructor(placeholder, value, callBack) {
@@ -20,12 +10,19 @@ function CreateButton(textContent, color, callBack) {
         
         }
         
-        layout();
+        layout(){
+            const input = document.createElement('div');
+            input.innerHTML += `<input placeholder="${placeholder}" type="text" class="input">`
+            
+            return input;
+        };
         
-        setPlaceholder(text);
+        setPlaceholder(text){};
         
-        setCallBack(callBack);
+        setCallBack(callBack){};
         
         }
 
-    const input = new CreateInput()
+    const input = new CreateInput("Введите текст", "Привет", () => {console.log("колбэк")});
+
+    console.log(input)
